@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="pt-br"><!-- Declaração do tipo de documento e idioma da página -->
+<head><!-- Cabeçalho do documento, com a tag head -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Prática 01</title>
+    <title>Atividade Prática 01</title><!-- Título da página, com a tag title -->
 </head>
-<body>
-    <h1>Receita de Medalhão ao Molho de Vinho</h1>
+<body><!-- Corpo do documento, com a tag body -->
+    <h1>Receita de Medalhão ao Molho de Vinho</h1> <!-- Título da receita, com a tag de título h1-->
     <img src="Carne.jpg" alt="Medalhão ao Molho de Vinho" width="300">
     <div>
-    <h3>Descrição:</h3>
+    <h3>Descrição:</h3> <!-- Descrição da receita, com a tag de título h3-->   
     <p>Esta receita de medalhão ao molho de vinho é perfeita para um jantar especial. O filé mignon é suculento e o molho de vinho tinto adiciona um sabor rico e sofisticado ao prato.</p>
     </div>
     
     <div>
     <h2>Ingredientes:</h2>
-    <ul>
+    <ul> <!-- Lista de ingredientes, com a tag de lista não ordenada ul-->
         <li>4 medalhões de filé mignon</li>
         <li>Sal e pimenta a gosto</li>
         <li>2 colheres de sopa de manteiga</li>
@@ -28,8 +28,8 @@
     </div>
 
     <div>
-    <h2>Modo de Preparo:</h2>
-    <ol>
+    <h2>Modo de Preparo:</h2> <!-- Modo de Preparo, com a tag de título h2-->
+    <ol> <!-- Lista de instruções, com a tag de lista ordenada ol-->
         <li>Tempere os medalhões com sal e pimenta.</li>
         <li>Aqueça a manteiga em uma frigideira grande e doure os medalhões.</li>
         <li>Despeje o vinho tinto e o caldo de carne na frigideira.</li>
@@ -41,13 +41,13 @@
     </div>
 
     <div>
-    <a href="https://www.youtube.com/watch?v=7EumdGRLVgQ" target="_blank">Clique aqui para ver o vídeo do preparo.</a>
+    <a href="https://www.youtube.com/watch?v=7EumdGRLVgQ" target="_blank">Clique aqui para ver o vídeo do preparo.</a> <!-- Link para o vídeo do preparo, com a tag de link a -->
     </div>
 
       <div>
-        <table border="1">
+        <table border="1"> <!-- Tabela de informações nutricionais, com a tag de tabela table -->
             <caption>Informações Nutricionais</caption>
-            <thead>
+            <thead><!-- Cabeçalho da tabela, com a tag de cabeçalho thead -->
                 <tr>
                     <th>Porção</th>
                     <th>Calorias</th>
@@ -56,7 +56,7 @@
                     <th>Carboidratos</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody><!-- Corpo da tabela, com a tag de corpo tbody -->
                 <tr>
                     <td>1 medalhão (150g)</td>
                     <td>250 kcal</td>
@@ -64,20 +64,37 @@
                     <td>15g</td>
                     <td>5g</td>
                 </tr>
+                <tr>
+                    <td>2 medalhões (300g)</td>
+                    <td>500 kcal</td>
+                    <td>50g</td>
+                    <td>30g</td>
+                    <td>10g</td>
+                </tr>
             </tbody>
-            <tfoot>
+            <tfoot><!-- Rodapé da tabela, com a tag de rodapé tfoot -->
                 <tr>
                     <td colspan="5">Valores aproximados por porção</td>
                 </tr>
         </table>
     </div> 
 
-    <div>
+    <div> <!-- Formulário para avaliações e comentários, com a tag de formulário form -->
         <form action="processar_receita.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
+            <dropdown>
+                <label for="avaliacao">Avaliação:</label>
+                <select id="avaliacao" name="avaliacao" required>
+                    <option value="">Selecione</option>
+                    <option value="1">1 estrela</option>
+                    <option value="2">2 estrelas</option>
+                    <option value="3">3 estrelas</option>
+                    <option value="4">4 estrelas</option>
+                    <option value="5">5 estrelas</option>
+                </select><br><br>  
             <label for="comentario">Comentário:</label><br>
             <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
             <input type="submit" value="Enviar Comentário">
